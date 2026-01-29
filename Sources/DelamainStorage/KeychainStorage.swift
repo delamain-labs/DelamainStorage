@@ -117,6 +117,8 @@ public actor KeychainStorage: Storage {
     }
 
     public func clear() async throws {
+        // Delete all items matching the service
+        // Note: SecItemDelete removes ALL matching items, no limit needed
         var query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service
@@ -126,10 +128,14 @@ public actor KeychainStorage: Storage {
             query[kSecAttrAccessGroup as String] = accessGroup
         }
 
-        let status = SecItemDelete(query as CFDictionary)
+        // Keep deleting until no more items exist
+        var status = SecItemDelete(query as CFDictionary)
+        while status == errSecSuccess {
+            status = SecItemDelete(query as CFDictionary)
+        }
 
         // It's okay if no items exist
-        guard status == errSecSuccess || status == errSecItemNotFound else {
+        guard status == errSecItemNotFound else {
             throw StorageError.keychainError(status)
         }
     }
