@@ -1,0 +1,15 @@
+{
+  "originHash" : "1b6658d9e1db857990ab649781052dd194fb60d395ffdd26c0cf3a2d3993d595",
+  "pins" : [
+    {
+      "identity" : "delamaincore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/delamain-labs/DelamainCore.git",
+      "state" : {
+        "revision" : "fe2fac6c654fc8282c4805ebf1dd5cf2c3b51a85",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
