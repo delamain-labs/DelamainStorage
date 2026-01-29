@@ -2,7 +2,7 @@
 
 This document outlines planned features and improvements for DelamainStorage.
 
-## ✅ v1.0.0 (In Progress)
+## ✅ v1.0.0 (Released)
 
 ### Core Features
 - [x] Storage protocol with async/await API
@@ -14,11 +14,11 @@ This document outlines planned features and improvements for DelamainStorage.
 ### Storage Backends
 - [x] **InMemoryStorage** — Fast temporary storage for testing/caching
 - [x] **UserDefaultsStorage** — Standard preferences storage with suite support
-- [ ] **FileStorage** — File-based persistence *(up next)*
-- [ ] **KeychainStorage** — Secure credential storage
+- [x] **FileStorage** — File-based persistence with rotation support
+- [x] **KeychainStorage** — Secure credential storage
 
 ### Quality
-- [x] Comprehensive test coverage (45 tests)
+- [x] Comprehensive test coverage (77 tests)
 - [x] Documentation and examples
 - [x] SwiftLint integration
 
