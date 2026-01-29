@@ -2,23 +2,25 @@
 
 This document outlines planned features and improvements for DelamainStorage.
 
-## v1.0.0 (In Progress)
+## ✅ v1.0.0 (In Progress)
 
 ### Core Features
-- [ ] Storage protocol with async/await API
-- [ ] Type-safe storage keys
-- [ ] Full Sendable/actor isolation
+- [x] Storage protocol with async/await API
+- [x] Type-safe storage keys (StorageKey<T>)
+- [x] Full Sendable/actor isolation
+- [x] StorageError with LocalizedError conformance
+- [x] CI/CD pipeline (build, test, lint)
 
 ### Storage Backends
-- [ ] UserDefaultsStorage — Standard preferences storage
-- [ ] FileStorage — File-based persistence
-- [ ] KeychainStorage — Secure credential storage
-- [ ] InMemoryStorage — Fast temporary storage
+- [x] **InMemoryStorage** — Fast temporary storage for testing/caching
+- [x] **UserDefaultsStorage** — Standard preferences storage with suite support
+- [ ] **FileStorage** — File-based persistence *(up next)*
+- [ ] **KeychainStorage** — Secure credential storage
 
 ### Quality
-- [ ] Comprehensive test coverage
-- [ ] Documentation and examples
-- [ ] CI/CD pipeline
+- [x] Comprehensive test coverage (45 tests)
+- [x] Documentation and examples
+- [x] SwiftLint integration
 
 ---
 
